@@ -1,0 +1,10 @@
+.godot/
+.DS_Store
+build/
+builds/
+*.keystore
+*.jks
+*.p12
+*.mobileprovision
+*.xcuserstate
+export_presets.cfg
