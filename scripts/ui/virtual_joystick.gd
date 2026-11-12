@@ -10,7 +10,6 @@ const DEADZONE: float = 6.0
 var _active_pointer: int = -1
 var _anchor: Vector2 = Vector2.ZERO
 var _knob_position: Vector2 = Vector2.ZERO
-var _direction: Vector2 = Vector2.ZERO
 
 
 func _input(event: InputEvent) -> void:
@@ -75,8 +74,7 @@ func _end_pointer() -> void:
 
 
 func _set_direction(value: Vector2) -> void:
-	_direction = value.limit_length(1.0)
-	direction_changed.emit(_direction)
+	direction_changed.emit(value.limit_length(1.0))
 
 
 func _draw() -> void:
