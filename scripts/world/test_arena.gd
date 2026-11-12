@@ -30,7 +30,7 @@ func _draw() -> void:
 
 	var random := RandomNumberGenerator.new()
 	random.seed = 4001
-	for _index in PATCH_COUNT:
+	for _index in range(PATCH_COUNT):
 		var patch_position := Vector2(
 			random.randf_range(-ARENA_HALF_SIZE, ARENA_HALF_SIZE),
 			random.randf_range(-ARENA_HALF_SIZE, ARENA_HALF_SIZE)
